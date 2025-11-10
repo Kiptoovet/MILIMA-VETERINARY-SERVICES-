@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Milima Veterinary Services | Vets & Farmers Connected</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="https://i.ibb.co/0jYkWvP/milima-logo.png" alt="Milima Veterinary Services Logo" width="60" height="60">
+        <h1>Milima <span>Veterinary Services</span></h1>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#find-vet">Find Vet</a>
+        <a href="#post-case">Post Case</a>
+        <a href="#research">BPV Research</a>
+        <a href="#learn">Learn</a>
+        <button id="lang-toggle">Kiswahili</button>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Expert Vet Care. From Farm to Lab.</h1>
+      <p>Founded by <strong>@SIRBOSCO_</strong> — BVM Student, BPV Researcher, Kenya</p>
+      <div class="hero-btns">
+        <a href="#find-vet" class="btn primary">Find a BVM Vet</a>
+        <a href="#post-case" class="btn secondary">Post Case (KSh 200)</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="research" class="section bg-light">
+    <div class="container">
+      <h2>Bovine Papillomavirus (BPV) Research</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Warts → Cancer Risk</h3>
+          <p>BPV-1, BPV-2 linked to bladder cancer in cattle. Early detection saves lives.</p>
+          <a href="#">Read My GSK Proposal →</a>
+        </div>
+        <div class="card">
+          <h3>Vaccination Trials</h3>
+          <p>Testing L1 protein vaccines in Nakuru & Kisumu. Join the study!</p>
+          <a href="#">Farmer Sign-Up →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="find-vet" class="section">
+    <div class="container">
+      <h2>Find a KVB-Registered BVM Vet Near You</h2>
+      <div class="search-box">
+        <input type="text" placeholder="Enter county (e.g., Nakuru, Kisumu)" id="county-search">
+        <button onclick="searchVets()">Search</button>
+      </div>
+      <div id="vet-results" class="grid"></div>
+    </div>
+  </section>
+
+  <section id="post-case" class="section bg-light">
+    <div class="container">
+      <h2>Describe Your Animal’s Problem (KSh 200 via M-Pesa)</h2>
+      <form id="case-form">
+        <input type="text" placeholder="Farmer Name" required>
+        <input type="tel" placeholder="M-Pesa Phone (07XX)" required>
+        <input type="text" placeholder="Location (Village/County)" required>
+        <select required>
+          <option value="">Animal Type</option>
+          <option>Cow</option>
+          <option>Goat</option>
+          <option>Sheep</option>
+          <option>Chicken</option>
+        </select>
+        <textarea placeholder="Symptoms (e.g., swelling on jaw, diarrhea, not eating)" required></textarea>
+        <input type="file" accept="image/*">
+        <button type="submit">Submit Case → Vets Will Reply</button>
+      </form>
+      <p class="note">Your case will be visible to registered vets only.</p>
+    </div>
+  </section>
+
+  <section id="learn" class="section">
+    <div class="container">
+      <h2>Vet Tips & Guides by @SIRBOSCO_</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Lumpy Jaw in Cattle</h3>
+          <p>Caused by Actinomyces bovis. Early detection saves lives.</p>
+          <a href="#">Read Guide →</a>
+        </div>
+        <div class="card">
+          <h3>Foot-and-Mouth Disease</h3>
+          <p>Quarantine, vaccination, reporting protocol in Kenya.</p>
+          <a href="#">View Protocol →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p><strong>Milima Veterinary Services</strong> | By @SIRBOSCO_, Egerton University</p>
+      <p>Emergency? Call <strong>0700-MILIMA</strong> | M-Pesa: <strong>0768 000 999</strong></p>
+      <p>© 2025 Milima Veterinary Services. Dedicated to Every Paw and Hoof.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
