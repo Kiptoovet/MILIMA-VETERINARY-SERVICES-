@@ -1,0 +1,35 @@
+const vets = [
+  { name: "Dr. Bosco Sir (BVM)", county: "Nakuru", phone: "0712345678", specialty: "BPV Research, Cattle" },
+  { name: "Dr. Amina Juma (BVM)", county: "Kisumu", phone: "0723456789", specialty: "Poultry & Goats" },
+  { name: "Dr. Peter Ochieng (BVM)", county: "Machakos", phone: "0734567890", specialty: "Large Herd Management" }
+];
+
+function searchVets() {
+  const query = document.getElementById("county-search").value.toLowerCase();
+  const results = vets.filter(v => v.county.toLowerCase().includes(query));
+  const container = document.getElementById("vet-results");
+  if (results.length === 0) {
+    container.innerHTML = "<p class='card'>No vets found in this area yet. Try nearby counties.</p>";
+    return;
+  }
+  container.innerHTML = results.map(v => `
+    <div class="card">
+      <h3>${v.name}</h3>
+      <p><strong>Location:</strong> ${v.county} County</p>
+      <p><strong>Specialty:</strong> ${v.specialty}</p>
+      <p><strong>Call:</strong> <a href="tel:${v.phone}" style="color: #0a5c36;">${v.phone}</a></p>
+      <button class="btn primary" onclick="alert('Booking coming soon! Call directly.')">Book Now</button>
+    </div>
+  `).join("");
+}
+
+document.getElementById("case-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const phone = this.querySelector("input[type='tel']").value;
+  alert(`Case submitted! M-Pesa prompt sent to ${phone} (KSh 200). Vets will reply in 24 hrs.`);
+  this.reset();
+});
+
+document.getElementById("lang-toggle").addEventListener("click", function() {
+  alert("Swahili toggle coming soon! / Kiswahili toggle hii hii hivi!");
+});
